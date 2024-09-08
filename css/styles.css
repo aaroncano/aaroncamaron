@@ -1,0 +1,259 @@
+:root {
+    /*colores*/
+        /* Colores primarios */
+        --color-fondo-principal: #090a14;
+        --color-fondo-secundario: #172038; 
+        --color-primario: #a8ca58;
+        --color-secundario: #4f8fba; 
+    
+        /* Colores de texto */
+        --texto-primario: #FFFFFF; 
+        --texto-secundario: #BBBBBB; 
+        --texto-enlaces: #83C5BE; 
+    
+        /* Colores de interfaz */
+        --boton-primario: #06D6A0; 
+        --boton-primario-hover: #04A77D;
+        --boton-secundario: #118AB2; 
+        --boton-secundario-hover: #0D5C78; 
+    
+        --borde-general: #333333; 
+        --sombra-elemento: rgba(0, 0, 0, 0.5);
+        --border-radius: 10px;
+
+        --font-pixelada: 'Press Start 2P', monospace;
+        --font-mono: "Tiny5", sans-serif;
+}
+
+body{
+    font-family: var(--font-mono);
+    background-color: var(--color-fondo-secundario);
+    color: var(--texto-primario);
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+}
+
+section{
+    background-color: var(--color-fondo-primario);
+    padding: 20px;
+    margin: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--sombra-elemento);
+}
+
+h1 {
+    font-family: var(--font-pixelada);
+    color: var(--color-primario);
+    font-size: clamp(1.6rem, 3vw, 3vw);
+    padding: 0; 
+    margin: 0; 
+    margin-bottom: 0.5rem;
+}
+h2{
+    font-family: var(--font-mono);
+    color: var(--color-secundario);
+    font-size: clamp(1.4rem, 2.5vw, 2.5vw); 
+    text-align: left;
+    padding: 0;
+    margin: 0 auto; 
+    margin-bottom: 2rem;
+}
+p{
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
+    line-height: 2; 
+}
+
+
+/* Cosas del header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+    background-color: var(--color-fondo-secundario);
+    color: var(--texto-primario);
+}
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+header h1 {
+    font-size: 1rem;
+    display: innline;
+    margin-left: 10px;
+}	
+header .logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+nav ul li a {
+    color: var(--texto-primario);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* hero */
+#inicio {
+    background-color: var(--color-fondo-principal);
+    position: relative;
+    min-height: calc(100vh - 85px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 15px; 
+    box-sizing: border-box; 
+}
+
+.hero-content {
+    z-index: 2; 
+    margin-bottom: 20px; 
+}
+.hero-content div {
+    max-width: 800px; 
+    margin-left: 0.5rem;
+}
+
+.social-icons-container {
+    position: absolute;
+    bottom: calc(0vh + 20px);
+    z-index: 10;
+}
+.social-icons {
+    display: flex;
+    justify-content: left; 
+    width: 100%; 
+}
+@media (max-width: 800px) {
+    .social-icons {
+        flex-direction: column;
+    }
+    .social-icon {
+        margin-top: 40px;
+    }
+}
+.social-icon {
+    display: block;
+    text-align: center; 
+    margin-right: 40px;
+    font-size: 1.5rem; 
+    color: var(--color-secundario);
+}
+.social-icon i {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.background-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35vw; 
+    z-index: 1; 
+    object-fit: cover; 
+}
+@media (max-width: 1400px) {
+    .background-image {
+        width: 45vh;
+    }
+}
+@media (max-width: 600px) {
+    .background-image {
+        width: 25vh;
+    }
+}
+
+
+
+
+
+
+
+
+/* galeria */
+/* Estilos para la galería tipo Masonry */
+#galeria {
+    background-color: var(--color-fondo-principal);
+}
+.gallery-container {
+    column-count: 3; /* Número de columnas */
+    column-gap: 10px; /* Espacio entre columnas */
+
+}
+.gallery-item {
+    break-inside: avoid; /* Evita que los elementos se rompan entre columnas */
+    margin-bottom: 10px; /* Espacio entre elementos */
+    width: 100%;
+}
+.gallery-item img {
+    width: 100%; /* Ajusta las imágenes al ancho de la columna */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: var(--border-radius);
+}
+/* Ajustes responsivos para diferentes tamaños de pantalla */
+@media (max-width: 800px) {
+    .gallery-container {
+        column-count: 2; /* Reduce el número de columnas en pantallas más pequeñas */
+    }
+}
+@media (max-width: 500px) {
+    .gallery-container {
+        column-count: 1; /* Una sola columna para dispositivos móviles */
+    }
+}
+
+
+
+/* contacto */
+form {
+    background-color: var(--color-fondo-secundario);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--sombra-elemento);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--borde-general);
+    background-color: var(--color-fondo-principal);
+    color: var(--texto-primario);
+}
+
+form label {
+    color: var(--texto-primario);
+}
+
+form button {
+    background-color: var(--boton-primario);
+    color: var(--texto-primario);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--boton-primario-hover);
+}

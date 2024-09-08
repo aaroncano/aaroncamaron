@@ -1,2 +1,0 @@
-# aaroncamaron
-Pagina para aaroncamaron
