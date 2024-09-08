@@ -31,7 +31,7 @@ body{
     color: var(--texto-primario);
     margin: 0;
     padding: 0;
-    height: 100dvh;
+    height: 100vh;
 }
 
 section{
@@ -115,7 +115,7 @@ nav ul li a:hover {
 #inicio {
     background-color: var(--color-fondo-principal);
     position: relative;
-    min-height: calc(100vh - 85px); 
+    height: calc(100svh - 85px); 
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
