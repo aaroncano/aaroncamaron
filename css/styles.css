@@ -115,7 +115,7 @@ nav ul li a:hover {
 #inicio {
     background-color: var(--color-fondo-principal);
     position: relative;
-    height: calc(100svh - 85px); 
+    min-height: calc(100svh - 85px); 
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
