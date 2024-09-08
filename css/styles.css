@@ -31,6 +31,7 @@ body{
     color: var(--texto-primario);
     margin: 0;
     padding: 0;
+    padding-top: 70px;
     height: 100vh;
 }
 
@@ -68,12 +69,18 @@ p{
 
 /* Cosas del header */
 header {
+    position: fixed;     
+    top: 0;               
+    width: calc(100% - 40px);         
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 10px;
+    margin: 0;         
+    padding: 10px 20px;        
     background-color: var(--color-fondo-principal);
     color: var(--texto-primario);
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 header > div {
     display: flex;
@@ -135,7 +142,7 @@ nav ul li a:hover {
 
 .social-icons-container {
     position: absolute;
-    bottom: calc(0vh + 20px);
+    bottom: calc(0dvh + 20px);
     z-index: 10;
 }
 .social-icons {
@@ -156,7 +163,7 @@ nav ul li a:hover {
     text-align: center; 
     margin-right: 40px;
     font-size: 1.5rem; 
-    color: var(--color-secundario);
+    color: var(--color-primario);
 }
 .social-icon i {
     width: 100%;
