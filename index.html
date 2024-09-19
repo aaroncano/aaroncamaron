@@ -13,17 +13,27 @@
 </head>
 <body>
 
-    <header>
-        <div>
-            <div class="logo">
-                <img src="img/yo_transparente.png" alt="Logo aaroncamaron">
-            </div>
-        </div>        
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <header class="primary-header flex">
+        <div class="logo">
+            <img src="img/yo_transparente.png" alt="Logo aaroncamaron">
+        </div> 
+        <nav>    
+            <ul id="primary-navigation" class="primary-navigation flex">
+                <li>
+                    <a href="#inicio">
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#proyectos">
+                        <span>Proyectos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto">
+                        <span>Contacto</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -54,15 +64,46 @@
                     <img src="img/me&yuma.png" alt="Foto de aaroncamaron">
                 </div>
                 <h3>
-                    Yo (Aarón Cano) y mi perro (Yuma)
+                   Mi perro (Yuma) y yo (Aarón Cano)
                 </h3>
                 <p>
-                    Nací y crecí en Tabasco, México. Soy programador, aunque desde pequeño me interesó el arte. En 2020 me interesé por el desarrollo de videojuegos, lo que me llevó a conocer el pixel art;
-                    a partir de ahí me gustó hacer mis propios trabajos e imágenes, después se convirtió en mi principal forma de expresión creativa.
-                    Con mis pixelitos intento explorar mis sentimientos e ideas. Mi proceso siempre es algo caótico pero me divirtio mucho probando cosas nuevas.
-                    ¡Me encantan los sombreros, las calaveras, las plantas, los animales y la ciencia ficción!
+                    Nací y crecí en Tabasco, México. Soy programador, aunque desde pequeño me gustó el arte. En 2020 me interesé por el desarrollo de videojuegos, lo que me llevó a conocer el pixel art;
+                    a partir de ahí me gustó hacer mis propios trabajos e imágenes y pronto se convirtió en mi principal forma de expresión creativa.
+                    Mi proceso suele ser algo caótico pero me divirtio probando cosas nuevas y re-definiendo mi estilo.
+                    Me gustan los sombreros, las calaveras, las plantas, los animales y la ciencia ficción.
                 </p>
             </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <h2>Algunos de mis trabajos</h2>
+            <div class="proyectos-container">
+                <div class="proyecto-item">
+                    <img src="img/perrito_horizonte.png" alt="Chill Sunset.">
+                    <p>Frente al mar.</p>
+                </div>
+                <div class="proyecto-item reverse">
+                    <img src="img/cumple_rosi15.png" alt="Chill Sunset.">
+                    <p>Tarde ideal.</p>
+                </div>
+                <div class="proyecto-item">
+                    <img src="img/black_hole.png" alt="Lazarus.">
+                    <p>Lazarus (?).</p>
+                </div>
+                <div class="proyecto-item reverse">
+                    <img src="img/cocuga.png" alt="Un verano sin ti.">
+                    <p>Tortuga lectora.</p>
+                </div>
+                <div class="proyecto-item">
+                    <img src="img/pollito_cowboy_rediseño.png" alt="Dulce olvido.">
+                    <p>Pollo borgesiano.</p>
+                </div>
+                <div class="proyecto-item reverse">
+                    <img src="img/lonely_explorer_62.png" alt="Explorador solitario.">
+                    <p>Explorador solitario.</p>
+                </div>
+
         </section>
 
 
@@ -135,21 +176,29 @@
 
         <section id="contacto">
             <h2>Contacta conmigo</h2>
-            <form action="submit_form.php" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-            </form>
+            <div class="contact-container">
+                <div>
+                    <p>Si te gustó mi trabajo o tienes alguna pregunta, no dudes en contactarme.</p>
+                    <form action="submit_form.php" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </form>
+                </div>
+                <div class="imagen-contacto">
+                    <img src="img/KarateKid_cover - copia.png" alt="Foto karate kid">
+                </div>
+            </div>
         </section>
-
     </main>
+
     <footer>
-        <p>2024 aaroncamaron.</p>
+        <p>2024 @aaroncamaron.</p>
     </footer>
 
     <script src="js/script.js"></script>
