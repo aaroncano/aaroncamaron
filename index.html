@@ -17,13 +17,20 @@
         <div class="logo">
             <img src="img/yo_transparente.png" alt="Logo aaroncamaron">
         </div> 
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <i class="bi bi-list hamburguer"></i>
+        </button>
         <nav>    
-            <ul id="primary-navigation" class="primary-navigation flex">
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
                 <li>
                     <a href="#inicio">
                         <span>Inicio</span>
                     </a>
                 </li>
+                <li>
+                    <a href="#sobre">
+                        <span>Sobre mí</span>
+                    </a>
                 <li>
                     <a href="#proyectos">
                         <span>Proyectos</span>
@@ -48,9 +55,12 @@
             </div>
             <div class="social-icons-container">
                 <div class="social-icons">
-                    <a href="https://instagram.com" class="social-icon"><i class="bi bi-instagram"></i></a>
-                    <a href="https://tiktok.com" class="social-icon"><i class="bi bi-tiktok"></i></a>
-                    <a href="mailto:example@email.com" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                    <div class="copy-container">
+                        <span class="alerta-correo" style="display: none;">¡e-mail copiado!</span>
+                        <a onclick="copiarCorreo(this)" target="_blank" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                    <a href="https://www.instagram.com/aaroncamaron_/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@aaroncamaron_" target="_blank" class="social-icon"><i class="bi bi-tiktok"></i></a>
                 </div>  
             </div>
             <img src="img/calavera_web.png" alt="Imagen Decorativa" class="background-image">
@@ -80,27 +90,39 @@
             <h2>Algunos de mis trabajos</h2>
             <div class="proyectos-container">
                 <div class="proyecto-item">
-                    <img src="img/perrito_horizonte.png" alt="Chill Sunset.">
+                    <div class="zoom-contenedor">
+                        <img src="img/perrito_horizonte.png" alt="Frente al mar.">
+                    </div>
                     <p>Frente al mar.</p>
                 </div>
                 <div class="proyecto-item reverse">
-                    <img src="img/cumple_rosi15.png" alt="Chill Sunset.">
+                    <div class="zoom-contenedor">
+                        <img src="img/cumple_rosi15.png" alt="Tarde ideal.">
+                    </div>
                     <p>Tarde ideal.</p>
                 </div>
                 <div class="proyecto-item">
+                    <div class="zoom-contenedor">
                     <img src="img/black_hole.png" alt="Lazarus.">
+                    </div>
                     <p>Lazarus (?).</p>
                 </div>
                 <div class="proyecto-item reverse">
-                    <img src="img/cocuga.png" alt="Un verano sin ti.">
+                    <div class="zoom-contenedor">
+                        <img src="img/cocuga.png" alt="Un verano sin ti.">
+                    </div>
                     <p>Tortuga lectora.</p>
                 </div>
                 <div class="proyecto-item">
-                    <img src="img/pollito_cowboy_rediseño.png" alt="Dulce olvido.">
+                    <div class="zoom-contenedor">
+                        <img src="img/pollito_cowboy_rediseño.png" alt="Dulce olvido.">                        
+                    </div>
                     <p>Pollo borgesiano.</p>
                 </div>
                 <div class="proyecto-item reverse">
-                    <img src="img/lonely_explorer_62.png" alt="Explorador solitario.">
+                    <div class="zoom-contenedor">
+                        <img src="img/lonely_explorer_62.png" alt="Explorador solitario.">
+                    </div>
                     <p>Explorador solitario.</p>
                 </div>
 
@@ -108,7 +130,7 @@
 
 
         <!-- galería -->
-        <section id="galeria">
+        <!-- <section id="galeria">
             <h2>Galería</h2>
             <div class="gallery-container">
                 <div class="gallery-item">
@@ -172,26 +194,42 @@
                     <img src="img/vaquero.png" alt="pixel obra 3">
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="contacto">
             <h2>Contacta conmigo</h2>
             <div class="contact-container">
-                <div>
-                    <p>Si te gustó mi trabajo o tienes alguna pregunta, no dudes en contactarme.</p>
-                    <form action="submit_form.php" method="POST">
+                <div class="form-container">
+                    <p>Si te gusta mi trabajo o tienes alguna pregunta, no dudes en contactarme.</p>
+                    <form name="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <!-- para bots -->
+                        <input type="hidden" name="bot-field" />
+                        
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" required>
+                        <input type="text" id="nombre" name="nombre" required>
                         
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
-        
+                        
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" required></textarea>
+                        
+                        <button type="submit">Enviar</button>
                     </form>
                 </div>
-                <div class="imagen-contacto">
-                    <img src="img/KarateKid_cover - copia.png" alt="Foto karate kid">
+                <div class="redes-container">
+                    <p>
+                        Encuéntrame en mis redes sociales o envíame un correo electrónico.
+                    </p>
+                    <div class="iconos-redes-contacto">
+                        <div class="copy-container">
+                            <span class="alerta-correo" style="display: none;">¡e-mail copiado!</span>
+                            <a onclick="copiarCorreo(this)" target="_blank" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                        <a href="https://www.instagram.com/aaroncamaron_/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aaroncamaron_" target="_blank" class="social-icon"><i class="bi bi-tiktok"></i></a>
+
+                    </div>  
                 </div>
             </div>
         </section>
