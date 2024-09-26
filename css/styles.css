@@ -489,10 +489,6 @@ form label {
     color: var(--color-fondo-principal);
 }
 
-.button a {
-    text-decoration: none;
-    color: var(--texto-primario);
-}
 
 @media (max-width: 850px) {
     .contact-container {
@@ -637,7 +633,7 @@ footer p {
 }
 
 .contenedor-mensaje-recibido {
-    background: linear-gradient(to bottom, #752438, #A53030, #CF573C);
+    background: radial-gradient(circle at center, #19332d,  #25562e, #468232);
 
     width: calc(100svw - 40px);
     height: calc(100svh - 40px);
@@ -654,4 +650,7 @@ footer p {
 }
 .contenedor-mensaje-recibido p{
     text-align: center;
+}
+.contenedor-mensaje-recibido .button {
+    max-width: 100%;
 }
