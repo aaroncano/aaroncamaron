@@ -465,7 +465,8 @@ form textarea {
 }
 
 form label {
-    color: var(--texto-primario);
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
 }
 
 .button {
