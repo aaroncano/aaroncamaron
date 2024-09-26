@@ -51,34 +51,26 @@ images.forEach(img => {
 });
 
 
-// detectar si es táctil
-function isTouchDevice() {
-    return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0));
-  }
-  
-  // Selecciona todos los contenedores de imágenes
-  const zoomContenedores = document.querySelectorAll('.zoom-contenedor');
-  
-  // añadir event listeners si no es táctil
-  if (!isTouchDevice()) {
-    // Itera sobre cada contenedor, añade event listeners
-    zoomContenedores.forEach(function(zoomContenedor) {
-      const imagen = zoomContenedor.querySelector('img');
-      
-      zoomContenedor.addEventListener('mousemove', function(e) {
+// Selecciona todos los contenedores de imágenes
+const zoomContenedores = document.querySelectorAll('.zoom-contenedor');
+
+// Itera sobre cada contenedor, añade event listeners
+zoomContenedores.forEach(function(zoomContenedor) {
+    const imagen = zoomContenedor.querySelector('img');
+    
+    zoomContenedor.addEventListener('mousemove', function(e) {
         const rect = zoomContenedor.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-  
+
         const xPorcentaje = (x / rect.width) * 100;
         const yPorcentaje = (y / rect.height) * 100;
-  
+
         imagen.style.transformOrigin = `${xPorcentaje}% ${yPorcentaje}%`;
-      });
-  
-      // Reinicia el transform-origin cuando el mouse sale del contenedor
-      zoomContenedor.addEventListener('mouseleave', function() {
-        imagen.style.transformOrigin = 'center center';
-      });
     });
-  }
+
+    // Reinicia el transform-origin cuando el mouse sale del contenedor
+    zoomContenedor.addEventListener('mouseleave', function() {
+        imagen.style.transformOrigin = 'center center';
+    });
+});

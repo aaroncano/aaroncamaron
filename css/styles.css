@@ -350,20 +350,6 @@ p{
         gap: 0;
     }
 }
-.zoom-contenedor {
-    overflow: hidden;
-    border-radius: var(--border-radius);
-    position: relative;
-}
-
-.zoom-contenedor img {
-    transition: transform 0.5s ease, transform-origin 0.5s ease;
-}
-
-.zoom-contenedor:hover img {
-    transform: scale(2);
-}
-
 
 
 
@@ -625,4 +611,20 @@ footer p {
 }
 .proyecto-item img.visible {
     opacity: 1;
+}
+.zoom-contenedor {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .zoom-contenedor img {
+        transition: transform 0.2s ease, transform-origin 0.2s ease; 
+    }
+    
+    .zoom-contenedor img:hover {
+        transform: scale(2);
+    }
 }
