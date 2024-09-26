@@ -201,7 +201,7 @@
             <div class="contact-container">
                 <div class="form-container">
                     <p>Si te gusta mi trabajo o tienes alguna pregunta, no dudes en contactarme.</p>
-                    <form name="contactForm" method="POST" netlify data-netlify-honeypot="bot-field">
+                    <form name="contactForm" method="POST" netlify data-netlify-honeypot="bot-field" action="/mensajeRecibido.html">
                         <!-- para bots -->
                         <input type="hidden" name="bot-field" />
                         
@@ -214,7 +214,7 @@
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" required></textarea>
                         
-                        <button type="submit">Enviar</button>
+                        <button class="button button-form" type="submit">Enviar</button>
                     </form>
                 </div>
                 <div class="redes-container">

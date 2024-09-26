@@ -468,7 +468,7 @@ form label {
     color: var(--texto-primario);
 }
 
-form button {
+.button {
     font-family: var(--font-mono);
     background-color: var(--color-fondo-principal);
     color: var(--texto-primario);
@@ -477,14 +477,21 @@ form button {
     border-radius: var(--border-radius);
     max-width: 50%;
     cursor: pointer;
-    margin-left: auto;
+    
     text-align: center;
     font-size: 1.2rem;
 }
-
-form button:hover {
+.button-form {
+    margin-left: auto;
+}
+.button:hover {
     background-color: var(--texto-terciario);
     color: var(--color-fondo-principal);
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--texto-primario);
 }
 
 @media (max-width: 850px) {
@@ -627,4 +634,24 @@ footer p {
     .zoom-contenedor img:hover {
         transform: scale(2);
     }
+}
+
+.contenedor-mensaje-recibido {
+    background: linear-gradient(to bottom, #752438, #A53030, #CF573C);
+
+    width: calc(100svw - 40px);
+    height: calc(100svh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+.contenedor-mensaje-recibido h1{
+    color: var(--texto-primario);
+    font-size: clamp(1.6rem, 3rem, 2.3vw);
+}
+.contenedor-mensaje-recibido p{
+    text-align: center;
 }
