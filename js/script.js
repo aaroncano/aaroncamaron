@@ -1,4 +1,4 @@
-//hamburguesa menu
+//menu de hamburguesa
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 
@@ -14,7 +14,6 @@ navToggle.addEventListener('click', () => {
     }   
 });
 
-
 // copia correo al portapapeles
 function copiarCorreo(element) {
     navigator.clipboard.writeText('aaroncanoc1@gmail.com').then(function() {
@@ -29,8 +28,6 @@ function copiarCorreo(element) {
         console.error('No se pudo copiar la dirección de correo: ', err);
     });
 }
-
-
 
 
 // Auste de visibilidad de las imágenes al hacer scroll en la section de proyectos destacado
@@ -51,10 +48,8 @@ images.forEach(img => {
 });
 
 
-// Selecciona todos los contenedores de imágenes
+// Itera sobre cada contenedor, añade event listeners para el movimiento del mouse
 const zoomContenedores = document.querySelectorAll('.zoom-contenedor');
-
-// Itera sobre cada contenedor, añade event listeners
 zoomContenedores.forEach(function(zoomContenedor) {
     const imagen = zoomContenedor.querySelector('img');
     

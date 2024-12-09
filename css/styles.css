@@ -1,42 +1,37 @@
 :root {
-    /*colores*/
-        /* Colores primarios */
-        --color-fondo-principal: #090a14;
-        --color-fondo-secundario: #19332d;
-        --color-fondo-terciario: #cf573c; 
-        --color-primario: #bb2b2b;
-        --color-secundario: #FFFFFF; 
-    
-        /* Colores de texto */
-        --texto-primario: #FFFFFF; 
-        --texto-secundario: #d4d4d4;
-        --texto-terciario: #a8ca58; 
-    
-        --sombra-elemento: rgba(2, 1, 1, 0.5);
-        --border-radius: 10px;
-        --borde-cuadrado: border: 2px solid #75A743;
+    /* Colores*/
+    --color-fondo-principal: #090a14;
+    --color-fondo-secundario: #19332d;
+    --color-fondo-terciario: #cf573c; 
+    --color-primario: #bb2b2b;
+    --color-secundario: #FFFFFF; 
 
-        --font-pixelada: 'Press Start 2P', monospace;
-        --font-mono: "Tiny5", sans-serif;
+    /* Colores de texto */
+    --texto-primario: #FFFFFF; 
+    --texto-secundario: #d4d4d4;
+    --texto-terciario: #a8ca58; 
+
+    /* fuentes, sombras y bordes*/
+    --sombra-elemento: rgba(2, 1, 1, 0.5);
+    --border-radius: 10px;
+    --borde-cuadrado: border: 2px solid #75A743;
+
+    --font-pixelada: 'Press Start 2P', monospace;
+    --font-mono: "Tiny5", sans-serif;
 }
 
+/* Componentes principales */
 body{
     font-family: var(--font-mono);
     background-color: var(--color-fondo-principal);
     color: var(--texto-primario);
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
 }
-
 section{
     background-color: var(--color-fondo-primario);
-    
-    /* border-radius: var(--border-radius); */
-    /* box-shadow: 0 4px 8px var(--sombra-elemento); */
 }
-
 h1 {
     font-family: var(--font-pixelada);
     color: var(--color-primario);
@@ -87,13 +82,12 @@ p{
     align-items: center;
     justify-content: space-between;
     z-index: 800;
-
     background: rgba(9, 10, 20, 0.9);
-
     position: fixed;
     inset: 0 0 auto;
     height: 70px;
 }
+/* Blur en caso de ser soportado */
 @supports (backdrop-filter: blur(1rem)) {
     .primary-header {
         background: rgba(9, 10, 20, 0.5);
@@ -103,14 +97,12 @@ p{
 .mobile-nav-toggle {
     display: none;
 }
-
 .primary-navigation{
     list-style: none;
     margin: 0;
     padding: 10px 20px;
     z-index: 1000;
 }
-
 .primary-navigation a {
     text-decoration: none;
     color: var(--texto-primario);
@@ -121,24 +113,19 @@ p{
     color: var(--texto-terciario);
     text-decoration: underline;
 }
-
 .primary-navigation a > [aria-hidden="true"] {
     margin-inline-end: 0.75em;
 }
 @media (max-width: 35em) {
     .primary-navigation {
         gap: 2em;
-
         position: absolute;
         top: 0;
         left: 30%;
         width: 70%;
         height: 100vh;
-        
-
         flex-direction: column;
         padding: min(20vh, 10rem) 2em;
-
         transform: translateX(100%);
         transition: transform 350ms ease-in;
         background: rgba(9, 10, 20, 0.9);
@@ -149,11 +136,9 @@ p{
             backdrop-filter: blur(1rem);
         }
     }
-
     .primary-navigation[data-visible="true"] {
         transform: translateX(0%);
     }
-
     .mobile-nav-toggle {
         display: block;
         position: fixed;
@@ -194,7 +179,6 @@ p{
     margin-top: 0;
     padding-top: 0;
 }
-
 .hero-content {
     z-index: 2; 
     margin-bottom: 20px; 
@@ -203,7 +187,6 @@ p{
     max-width: 800px; 
     margin-left: 0.5rem;
 }
-
 .social-icons-container {
     position: absolute;
     bottom: calc(0svh + 20px);
@@ -264,6 +247,7 @@ p{
 }
 
 
+
 /* sobre mí */
 #sobre{
     padding-top: 50px;
@@ -303,14 +287,11 @@ p{
 }
 
 
+
 /* proyectos */
 #proyectos {
     padding-top: 50px;
-    background: linear-gradient(to right, 
-                                #172038 0%, 
-                                #090A14 10%, 
-                                #090A14 90%, 
-                                #172038 100%);
+    background: linear-gradient(to right, #172038 0%, #090A14 10%, #090A14 90%, #172038 100%);
 }
 .proyectos-container {
     display: flex;
@@ -358,12 +339,6 @@ p{
 #galeria {
     display: none;
     background-color: var(--color-fondo-principal);
-    /* box-shadow: 
-    rgba(9, 10, 20, 0.7) 0px 5px,
-    rgba(9, 10, 20, 0.5) 0px 10px, 
-    rgba(9, 10, 20, 0.3) 0px 15px,
-    rgba(9, 10, 20, 0.2) 0px 20px,
-    rgba(9, 10, 20, 0.1) 0px 25px; */
 }
 .gallery-container {
     column-count: 3; 
@@ -380,7 +355,6 @@ p{
     height: auto; 
     border-radius: var(--border-radius);
 }
-
 @media (max-width: 800px) {
     .gallery-container {
         column-count: 2; 
@@ -436,7 +410,6 @@ p{
     justify-content: space-between;
 
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -463,12 +436,10 @@ form textarea {
     resize: none;
     overflow-y: auto;
 }
-
 form label {
     color: var(--texto-secundario);
     font-size: 1.2rem;
 }
-
 .button {
     font-family: var(--font-mono);
     background-color: var(--color-fondo-principal);
@@ -489,8 +460,6 @@ form label {
     background-color: var(--texto-terciario);
     color: var(--color-fondo-principal);
 }
-
-
 @media (max-width: 850px) {
     .contact-container {
         flex-direction: column;
@@ -519,11 +488,9 @@ form label {
         width: 100%;
     }
 }
-
 .copy-container {
     position: relative;
 }
-
 .alerta-correo {
     display: none;
     background-color: var(--color-fondo-principal);
@@ -537,7 +504,6 @@ form label {
     transform: translate(20%, -50%);
     white-space: nowrap;
 }
-
 
 
 
@@ -568,6 +534,7 @@ footer p {
     animation: slide-in-left 1s forwards;
 }
 
+/* Aparición de los elementos */
 @keyframes slide-in-left {
     from {
         opacity: 0;
@@ -593,8 +560,7 @@ footer p {
         transform: translateY(0);
     }
 }
-
-/* Section sobre mí */
+/* sobre mí */
 /* balanceo para la imagen */
 .foto-about img:hover {
     animation: swing-hover 1s ease-in-out;
@@ -606,8 +572,6 @@ footer p {
     75% { transform: rotate(3deg); }
     100% { transform: rotate(0deg); }
 }
-
-
 /* sección de proyectos */
 .proyecto-item img {
     opacity: 0;
@@ -616,13 +580,12 @@ footer p {
 .proyecto-item img.visible {
     opacity: 1;
 }
+/* zoom en la imagen al hacer hover */
 .zoom-contenedor {
     overflow: hidden;
     border-radius: var(--border-radius);
     position: relative;
 }
-
-
 @media (hover: hover) and (pointer: fine) {
     .zoom-contenedor img {
         transition: transform 0.2s ease, transform-origin 0.2s ease; 
@@ -633,6 +596,7 @@ footer p {
     }
 }
 
+/* sección de contacto */
 .contenedor-mensaje-recibido {
     background: radial-gradient(circle at center, #19332d,  #25562e, #468232);
 
