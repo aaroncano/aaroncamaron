@@ -1,6 +1,8 @@
 # Pixel Art portfolio - aaroncamaron
 Single-page project that utilizes HTML, CSS, and pure JavaScript. It's designed to be responsive across all screen sizes. The site features animations using JavaScript and CSS, and is hosted on Netlify.
 
+[Visit my project](https://aaroncamaron.netlify.app/)
+
 ## Hero
 ![imagen](https://github.com/user-attachments/assets/23e12674-c569-4dc9-8e85-86ce00d3694e)
 
